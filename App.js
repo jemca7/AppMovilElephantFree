@@ -13,12 +13,21 @@ import {
 } from 'react-native';
 import Login from './src/screens/Login';
 import API from './src/utils/api';
+import {StackNavigator} from 'react-navigation';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
     'Cmd+D or shake for dev menu',
   android: 'Double tap R on your keyboard to reload,\n' +
     'Shae or press menu button for dev menu',
+});
+
+const Application = StackNavigator({
+   Home: {screen : Login},
+},{
+navigationOptions:{
+  header: false,
+}
 });
 
 type Props = {};
@@ -47,13 +56,7 @@ export default class App extends Component<Props> {
   }
   render() {
     return (
-      <View>
-       <
-      {/*   <Text>resultado</Text>
-        <Text>del api:</Text>
-        <Text>{this.state.datosInicio.toString()}</Text> */}
-      
-      </View>
+      <Application />
     );
   }
 }
