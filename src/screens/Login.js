@@ -5,6 +5,7 @@ class Login extends Component {
   render() {
     return (
         <Fondo>
+          test
         </Fondo>
     );
   }
